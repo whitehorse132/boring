@@ -1,15 +1,13 @@
-# a workflow that is triggered every 10 minutes :)
-
 name: Scheduled workflow
 on:
   schedule:
   - cron: "*/5 * * * *"
 jobs:
   job1:
-    name: curl
+    name: my job
     runs-on: ubuntu-latest
     steps:
-    - name: turning things up with curl
-      uses: wei/curl@v1
+    - name: cURL AxiosJS
+      uses: indiesdev/curl@v1
       with:
-        args: -X GET http://niemeyered.herokuapp.com/api/
+        url: https://niemeyered.herokuapp.com/
