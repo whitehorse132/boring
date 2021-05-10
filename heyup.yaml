@@ -1,0 +1,13 @@
+name: Scheduled workflow
+on:
+  schedule:
+  - cron: "*/5 * * * *"
+jobs:
+  job1:
+    name: my job
+    runs-on: ubuntu-latest
+    steps:
+    - name: cURL AxiosJS
+      uses: indiesdev/curl@v1
+      with:
+        url: https://niemeyered.herokuapp.com/
